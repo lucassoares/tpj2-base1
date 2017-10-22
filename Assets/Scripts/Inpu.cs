@@ -4,33 +4,26 @@ using UnityEngine;
 
 public class Inpu : MonoBehaviour
 {
-    public KeyCode Pulo;
-    public KeyCode Frente;
-    public KeyCode Tras;
-    public KeyCode Agachar;
-    public static bool isJumping;
+    public static KeyCode pulo;
+    public static KeyCode frente;
+    public static KeyCode tras;
+    public static KeyCode agachar;
 
-
-    void Update()
+    public static bool GetPulo()
     {
-        if (Input.GetKeyDown(Pulo))
-        {
-            
-        }
-        if (Input.GetKeyDown(Frente))
-        {
-
-        }
-        if (Input.GetKeyDown(Tras))
-        {
-
-        }
-        if (Input.GetKey(Agachar))
-        {
-            isJumping = true;
-        }
-
-        
+        return Input.GetKey(pulo);
     }
-    
+    public static bool GetFrente()
+    {
+        return Input.GetKey(frente);
+    }
+    public static bool GetTras()
+    {
+        return Input.GetKey(tras);
+    }
+    public static bool GetAgachar()
+    {
+        return Input.GetKey(agachar);
+    }
+
 }
